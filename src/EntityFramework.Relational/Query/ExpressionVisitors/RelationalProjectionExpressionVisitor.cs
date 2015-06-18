@@ -10,6 +10,7 @@ using Microsoft.Data.Entity.Storage;
 using Microsoft.Data.Entity.Utilities;
 using Remotion.Linq.Clauses;
 using Remotion.Linq.Clauses.Expressions;
+using Microsoft.Data.Entity.Infrastructure;
 
 namespace Microsoft.Data.Entity.Relational.Query.ExpressionVisitors
 {
@@ -43,7 +44,7 @@ namespace Microsoft.Data.Entity.Relational.Query.ExpressionVisitors
             {
                 var methodInfo = methodCallExpression.Method.GetGenericMethodDefinition();
 
-                if (ReferenceEquals(methodInfo, QueryExtensions.PropertyMethodInfo)
+                if (ReferenceEquals(methodInfo, EfMethodInfo.PropertyMethodInfo)
                     || ReferenceEquals(methodInfo, QueryExtensions.ValueBufferPropertyMethodInfo))
                 {
                     var newArg0 = Visit(methodCallExpression.Arguments[0]);

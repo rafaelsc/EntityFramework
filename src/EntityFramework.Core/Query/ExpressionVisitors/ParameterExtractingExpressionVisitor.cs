@@ -8,6 +8,7 @@ using System.Reflection;
 using JetBrains.Annotations;
 using Microsoft.Data.Entity.Internal;
 using Remotion.Linq.Parsing.ExpressionVisitors.TreeEvaluation;
+using Microsoft.Data.Entity.Infrastructure;
 
 namespace Microsoft.Data.Entity.Query.ExpressionVisitors
 {
@@ -40,7 +41,7 @@ namespace Microsoft.Data.Entity.Query.ExpressionVisitors
             {
                 var methodInfo = methodCallExpression.Method.GetGenericMethodDefinition();
 
-                if (ReferenceEquals(methodInfo, QueryExtensions.PropertyMethodInfo)
+                if (ReferenceEquals(methodInfo, EfMethodInfo.PropertyMethodInfo)
                     || ReferenceEquals(methodInfo, QueryExtensions.ValueBufferPropertyMethodInfo))
                 {
                     return methodCallExpression;

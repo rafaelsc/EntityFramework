@@ -59,6 +59,7 @@
     <Compile Include="Extensions\Internal\ExpressionExtensions.cs" />
     <Compile Include="Extensions\Internal\ListExtensions.cs" />
     <Compile Include="Extensions\Internal\PropertyInfoExtensions.cs" />
+    <Compile Include="Infrastructure\EfMethodInfo.cs" />
     <Compile Include="Internal\EnumerableExtensions.cs" />
     <Compile Include="Internal\Graph.cs" />
     <Compile Include="Internal\IndentedStringBuilder.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="ModelBuilder.cs" />
     <Compile Include="Query\Annotations\QueryAnnotation.cs" />
     <Compile Include="Query\Annotations\IncludeQueryAnnotation.cs" />
+    <Compile Include="Query\Ef.cs" />
     <Compile Include="Query\EntityLoadInfo.cs" />
     <Compile Include="Query\EntityTrackingInfo.cs" />
     <Compile Include="Query\ExpressionEvaluationHelpers.cs" />

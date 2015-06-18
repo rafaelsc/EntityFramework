@@ -12,6 +12,7 @@ using Microsoft.Data.Entity.Utilities;
 using Remotion.Linq.Clauses;
 using Remotion.Linq.Clauses.Expressions;
 using Remotion.Linq.Clauses.ExpressionVisitors;
+using Microsoft.Data.Entity.Infrastructure;
 
 namespace Microsoft.Data.Entity.Query.ExpressionVisitors
 {
@@ -114,7 +115,7 @@ namespace Microsoft.Data.Entity.Query.ExpressionVisitors
             if (methodCallExpression.Method.IsGenericMethod
                 && ReferenceEquals(
                     methodCallExpression.Method.GetGenericMethodDefinition(),
-                    QueryExtensions.PropertyMethodInfo))
+                    EfMethodInfo.PropertyMethodInfo))
             {
                 _inMember = true;
 

@@ -130,7 +130,7 @@ namespace Microsoft.Data.Entity.FunctionalTests.TestModels.Northwind
                 {
                     var methodInfo = methodCallExpression.Method.GetGenericMethodDefinition();
 
-                    if (ReferenceEquals(methodInfo, QueryExtensions.PropertyMethodInfo)
+                    if (ReferenceEquals(methodInfo, EfMethodInfo.PropertyMethodInfo)
                         || ReferenceEquals(methodInfo, QueryExtensions.ValueBufferPropertyMethodInfo))
                     {
                         return Expression.Property(

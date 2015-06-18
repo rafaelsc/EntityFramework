@@ -7,6 +7,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using Microsoft.Data.Entity.Query.Expressions;
 using Remotion.Linq.Clauses.Expressions;
+using Microsoft.Data.Entity.Infrastructure;
 
 namespace Microsoft.Data.Entity.Query.ExpressionVisitors
 {
@@ -26,7 +27,7 @@ namespace Microsoft.Data.Entity.Query.ExpressionVisitors
             if (expression.Method.IsGenericMethod)
             {
                 var genericMethodDefinition = expression.Method.GetGenericMethodDefinition();
-                if (ReferenceEquals(genericMethodDefinition, QueryExtensions.PropertyMethodInfo)
+                if (ReferenceEquals(genericMethodDefinition, EfMethodInfo.PropertyMethodInfo)
                     || ReferenceEquals(genericMethodDefinition, DbContextSetMethodInfo))
                 {
                     return base.VisitMethodCall(expression);
