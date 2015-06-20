@@ -76,6 +76,7 @@
     <Compile Include="Migrations\Infrastructure\MigrationAssembly.cs" />
     <Compile Include="Migrations\Infrastructure\MigrationIdGenerator.cs" />
     <Compile Include="Migrations\Infrastructure\MigrationModelFactory.cs" />
+    <Compile Include="Migrations\MigrationOperationTransformer.cs" />
     <Compile Include="Migrations\Migrator.cs" />
     <Compile Include="Migrations\Infrastructure\ModelSnapshot.cs" />
     <Compile Include="Metadata\IRelationalEntityTypeExtensions.cs" />
